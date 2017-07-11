@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+        【提交开源前的重要修改】
+        alipay.config.php相关配置
+        【一】
+        私钥和公钥文件存放在Tool/alipay/key目录下,可修改，但不建议修改
+        【二】
+        PayController.php的相关配置——异步通知、以及一些跳转地址
+        $seller_email = '卖家的支付宝账号';
+        【三】*Laravel框架*
+        Laravel框架自带CSRF拦截，因此外部通过post方式不能直接访问，需在配置文件VerifyCsrfToken.php增加例外。
+        【四】
+        支付宝不能通知本地页面，回调通知要在服务器上测试。
+        【五】
+        页面跳转同步网页：call_back_url.php其参数不一定正确，不能在该页面做数据处理，只能在此显示数据。
+        
+        </div>
+    </body>
+</html>

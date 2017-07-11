@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+        【提交开源前的重要修改】
+        SendTemplateSMS.php要删除配置
+        mail.php要删除邮箱
+        MemberController.php要删除邮箱
+        alipay.config.php配置删除
+        .env文件不能上传
+        【一】
+        MemberConterller.php的http://localhost/laravel52/public/service/validate_email需修改路径
+        【二】
+        master.blade.php的
+        <link rel="stylesheet" href="http://localhost/laravel52/public/css/weui.css">
+        <link rel="stylesheet" href="http://localhost/laravel52/public/css/book.css">
+        <img class="bk_back" src="http://localhost/laravel52/public/images/back.png" alt="" onclick="history.go(-1);">
+        <p class="bk_title_content"></p>
+        <img class="bk_menu" src="http://localhost/laravel52/public/images/menu.png" alt="" onclick="onMenuClick();">
+        <script src="http://localhost/laravel52/public/js/jquery-1.11.2.min.js"></script>
+          location.href='http://localhost/laravel52/public';
+        }
+          else if(index == 2) {
+          location.href='http://localhost/laravel52/public/category';
+        } else if(index == 3){
+          location.href='http://localhost/laravel52/public/cart';
+        } else if(index == 4){
+          location.href='http://localhost/laravel52/public/order_list';
+        }
+        
+        修改绝对路径指向
+        【三】
+        book.blade.php的
+        <img class="bk_preview" src="http://localhost/laravel52/public{{$book->preview}}">
+        修改绝对路径指向
+        【四】
+        book_content.blade.php的
+        <link rel="stylesheet" href="http://localhost/laravel52/public/css/swipe.css">
+        <img class="img-responsive" src="http://localhost/laravel52/public{{$book_image->path}}" />
+        <script src="http://localhost/laravel52/public/js/swipe.min.js" charset="utf-8"></script>
+        修改绝对路径指向
+        【五】
+        cart.blade.php的
+        <img class="bk_preview" src="http://localhost/laravel52/public{{$cart_item->book->preview}}" class="m3_preview" onclick="_toBook({{$cart_item->book->id}});"/>
+        修改绝对路径指向
+        【六】
+        annotation.blade.php的
+        <a class="weui_btn weui_btn_primary" href="http://localhost/laravel52/public/">首页</a>
+        修改绝对路径
+        【七】
+        master.blade.php的
+  <link href="/laravel52/public/admin/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="/laravel52/public/admin/css/H-ui.admin.css" rel="stylesheet" type="text/css" />
+  <link href="/laravel52/public/admin/lib/Hui-iconfont/1.0.6/iconfont.css" rel="stylesheet" type="text/css" />
+  <link href="/laravel52/public/admin/skin/default/skin.css" rel="stylesheet" type="text/css" id="skin" />
+  <link href="/laravel52/public/admin/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/laravel52/public/admin/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/js/jquery.form.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/js/uploadFile.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/lib/layer/2.1/layer.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/js/H-ui.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/lib/Validform/5.3.2/Validform.min.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/lib/ueditor/1.4.3/ueditor.config.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/lib/ueditor/1.4.3/ueditor.all.min.js"></script>
+<script type="text/javascript" src="/laravel52/public/admin/lib/ueditor/1.4.3/lang/zh-cn/zh-cn.js"></script>
+        修改路径
+
+        </div>
+    </body>
+</html>
